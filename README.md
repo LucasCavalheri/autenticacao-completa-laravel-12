@@ -1,59 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel API Authentication — Projeto Completo
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este repositório contém a implementação **completa e profissional de autenticação em Laravel**, com foco em **APIs reais**, **organização de código** e **boas práticas utilizadas no mercado**.
 
-## About Laravel
+O objetivo deste projeto não é apresentar um exemplo simples apenas para funcionar, mas sim demonstrar **como estruturar uma autenticação pronta para produção**, com código limpo, escalável e bem organizado.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎥 Vídeo Explicativo
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Todo o código deste repositório é explicado passo a passo no vídeo:
 
-## Learning Laravel
+👉 **Assista aqui:**  
+`https://www.youtube.com/watch?v=Ij8igIpqtEY`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+> Recomenda-se assistir ao vídeo para entender as decisões de arquitetura e organização do projeto.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 O que você vai encontrar neste projeto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🔐 Autenticação via API
+A autenticação foi implementada de forma modular e profissional, contendo os seguintes controllers dentro de `Api/Auth`:
 
-### Premium Partners
+- **LoginController**  
+  Responsável pela autenticação do usuário e geração do token
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **RegisterController**  
+  Responsável pelo cadastro de novos usuários e disparo do e-mail de boas-vindas
 
-## Contributing
+- **LogoutController**  
+  Responsável por invalidar o token do usuário autenticado
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **ProfileController**  
+  Responsável por retornar os dados do usuário autenticado
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🧩 Conceitos e boas práticas aplicadas
 
-## Security Vulnerabilities
+- Padronização de respostas HTTP usando **Traits**
+- Uso de **API Resources** para controle total do retorno
+- Envio de e-mail de boas-vindas com **Laravel Notifications**
+- Processamento assíncrono utilizando **Filas (Queues)**
+- Uso de **Single Action Controllers**
+- Separação de rotas por módulo
+- Uso correto de `config` para variáveis de ambiente (ex: URL do frontend)
+- Documentação automática da API utilizando **Laravel Scramble**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🎯 Para quem este projeto é indicado
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Este projeto é ideal para quem:
+
+- Já utiliza Laravel e quer subir o nível
+- Trabalha ou pretende trabalhar com APIs
+- Busca escrever código mais limpo, organizado e profissional
+- Quer entender decisões reais de arquitetura em projetos Laravel
+
+---
+
+## 📘 Documentação da API
+
+A documentação da API é gerada automaticamente com **Laravel Scramble**.
+
+Após subir o projeto, acesse:
+`https://localhost:8000/docs/api`
